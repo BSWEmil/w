@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emil | JavaScript lernen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">Emil</a>
+            <div class="nav-links">
+                <div class="nav-group">
+                    <span>Lernen</span>
+                    <a href="html-lernen.html">HTML</a>
+                    <a href="css-lernen.html">CSS</a>
+                    <a class="active" href="javascript-lernen.html">JavaScript</a>
+                    <a href="projekt.html">Projekt</a>
+                </div>
+                <div class="nav-group">
+                    <span>Emil</span>
+                    <a href="index.html">Start</a>
+                    <a href="ueber-mich.html">Über mich</a>
+                    <a href="hobbys.html">Hobbys</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="panel intro-panel">
+            <p class="eyebrow">Interaktions-Mission</p>
+            <h1>JavaScript macht deine Website lebendig.</h1>
+            <p>
+                JavaScript reagiert auf Klicks, ändert Texte, zählt Punkte und kann Dinge
+                anzeigen oder verstecken. Das ist der Teil, bei dem eine Seite anfängt zu reagieren.
+            </p>
+        </section>
+
+        <section class="lesson-layout">
+            <article class="lesson-card">
+                <h2>1. Element finden</h2>
+                <code>const text = document.getElementById("text");</code>
+                <p>So findest du ein HTML-Element über seine ID.</p>
+            </article>
+            <article class="lesson-card">
+                <h2>2. Text ändern</h2>
+                <code>text.textContent = "Neuer Text";</code>
+                <p>Damit ersetzt du den Inhalt eines Elements.</p>
+            </article>
+            <article class="lesson-card">
+                <h2>3. Klick ausführen</h2>
+                <code>&lt;button onclick="start()"&gt;Start&lt;/button&gt;</code>
+                <p>Beim Klick wird eine JavaScript-Funktion gestartet.</p>
+            </article>
+        </section>
+
+        <section class="learning-task panel">
+            <div>
+                <p class="eyebrow">Aufgabe 1</p>
+                <h2>Welche Zeile ändert einen Text?</h2>
+                <p>Wähle die richtige Antwort. Danach bekommst du direkt Feedback.</p>
+            </div>
+            <div class="choice-grid">
+                <button class="choice" type="button" onclick="checkJsMission(false)">text.color = "Hallo";</button>
+                <button class="choice" type="button" onclick="checkJsMission(true)">text.textContent = "Hallo";</button>
+                <button class="choice" type="button" onclick="checkJsMission(false)">text.href = "Hallo";</button>
+            </div>
+            <p id="jsFeedback" class="feedback">Tipp: `textContent` verändert sichtbaren Text.</p>
+        </section>
+
+        <section class="learning-task panel">
+            <div>
+                <p class="eyebrow">Aufgabe 2</p>
+                <h2>Finde ein Element mit seiner ID.</h2>
+                <p>Welche Zeile sucht ein HTML-Element mit der ID `titel`?</p>
+            </div>
+            <div class="choice-grid">
+                <button class="choice" type="button" onclick="checkJsIdMission(false)">document.query('titel')</button>
+                <button class="choice" type="button" onclick="checkJsIdMission(true)">document.getElementById('titel')</button>
+                <button class="choice" type="button" onclick="checkJsIdMission(false)">document.style.titel</button>
+            </div>
+            <p id="jsIdFeedback" class="feedback">Tipp: Die Methode heißt `getElementById`.</p>
+        </section>
+
+        <section class="live-editor panel">
+            <div class="editor-head">
+                <div>
+                    <p class="eyebrow">Live Code</p>
+                    <h2>JavaScript-Testfeld</h2>
+                </div>
+                <div class="button-row compact">
+                    <button class="button primary" type="button" onclick="runJsPlayground()">JavaScript starten</button>
+                    <button class="button" type="button" onclick="loadJsExample()">Beispiel laden</button>
+                </div>
+            </div>
+            <div class="editor-grid">
+                <label class="code-area">
+                    <span>Dein JavaScript</span>
+                    <textarea id="jsInput" spellcheck="false">const box = document.getElementById("jsTestTarget");
+box.textContent = "JavaScript hat diesen Text geändert!";
+console.log("Test erfolgreich gestartet.");</textarea>
+                </label>
+                <div class="preview-area">
+                    <span>Test-Ausgabe</span>
+                    <div id="jsTestTarget" class="js-test-box">Dieser Text kann mit JavaScript verändert werden.</div>
+                </div>
+            </div>
+            <div class="console-area">
+                <div class="console-title">
+                    <span>JavaScript-Konsole</span>
+                    <button class="console-clear" type="button" onclick="clearJsConsole()">Leeren</button>
+                </div>
+                <div id="jsConsoleOutput" class="console-output">
+                    <p>Warte auf console.log(...)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-step panel">
+            <div>
+                <p class="eyebrow">Finale</p>
+                <h2>Jetzt kannst du ein Projekt bauen.</h2>
+                <p>HTML gibt Inhalt, CSS gibt Style, JavaScript gibt Leben. Kombiniere jetzt alles.</p>
+            </div>
+            <a class="button primary" href="projekt.html">Zum Projekt</a>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

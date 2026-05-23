@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emil | HTML lernen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">Emil</a>
+            <div class="nav-links">
+                <div class="nav-group">
+                    <span>Lernen</span>
+                    <a class="active" href="html-lernen.html">HTML</a>
+                    <a href="css-lernen.html">CSS</a>
+                    <a href="javascript-lernen.html">JavaScript</a>
+                    <a href="projekt.html">Projekt</a>
+                </div>
+                <div class="nav-group">
+                    <span>Emil</span>
+                    <a href="index.html">Start</a>
+                    <a href="ueber-mich.html">Über mich</a>
+                    <a href="hobbys.html">Hobbys</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="panel intro-panel">
+            <p class="eyebrow">Kleine Anfänge</p>
+            <h1>HTML lernen</h1>
+            <p>
+                HTML ist die Sprache für den Inhalt einer Website. Mit Tags wie
+                Überschriften, Texten, Links und Buttons entsteht die Grundstruktur.
+                Unten kannst du eigenen Code schreiben und sofort sehen, was passiert.
+            </p>
+        </section>
+
+        <section class="lesson-layout">
+            <article class="lesson-card">
+                <h2>1. Überschrift</h2>
+                <code>&lt;h1&gt;Meine Überschrift&lt;/h1&gt;</code>
+                <p>Mit `h1` machst du die wichtigste Überschrift auf einer Seite.</p>
+            </article>
+            <article class="lesson-card">
+                <h2>2. Text</h2>
+                <code>&lt;p&gt;Das ist ein Text.&lt;/p&gt;</code>
+                <p>Mit `p` schreibst du normale Textabschnitte.</p>
+            </article>
+            <article class="lesson-card">
+                <h2>3. Link</h2>
+                <code>&lt;a href="index.html"&gt;Zur Startseite&lt;/a&gt;</code>
+                <p>Mit `a` kannst du auf andere Seiten verlinken.</p>
+            </article>
+        </section>
+
+        <section class="learning-task panel">
+            <div>
+                <p class="eyebrow">Aufgabe 1</p>
+                <h2>Schreibe das fehlende HTML-Tag.</h2>
+                <p>Welche Tags brauchst du, damit der Text eine große Überschrift wird?</p>
+            </div>
+            <div class="task-row">
+                <span>&lt;</span>
+                <input id="htmlAnswer" type="text" placeholder="Tag">
+                <span>&gt;Meine Website&lt;/</span>
+                <input id="htmlAnswerClose" type="text" placeholder="Tag">
+                <span>&gt;</span>
+            </div>
+            <button class="button primary" type="button" onclick="checkHtmlMission()">Prüfen</button>
+            <p id="htmlFeedback" class="feedback">Tipp: Die wichtigste Überschrift heißt h1.</p>
+        </section>
+
+        <section class="learning-task panel">
+            <div>
+                <p class="eyebrow">Aufgabe 2</p>
+                <h2>Baue einen Link.</h2>
+                <p>Welches HTML-Tag benutzt man, um auf eine andere Seite zu verlinken?</p>
+            </div>
+            <div class="choice-grid">
+                <button class="choice" type="button" onclick="checkHtmlLinkMission(false)">&lt;p&gt;Link&lt;/p&gt;</button>
+                <button class="choice" type="button" onclick="checkHtmlLinkMission(true)">&lt;a href="seite.html"&gt;Link&lt;/a&gt;</button>
+                <button class="choice" type="button" onclick="checkHtmlLinkMission(false)">&lt;h1&gt;Link&lt;/h1&gt;</button>
+            </div>
+            <p id="htmlLinkFeedback" class="feedback">Tipp: Ein Link braucht `href`.</p>
+        </section>
+
+        <section class="next-step panel">
+            <div>
+                <p class="eyebrow">Weiterlernen</p>
+                <h2>Wenn dein HTML steht, kommt CSS.</h2>
+                <p>Mit CSS machst du aus normalen Texten und Buttons eine echte Website mit Stil.</p>
+            </div>
+            <a class="button primary" href="css-lernen.html">Weiter zu CSS</a>
+        </section>
+
+        <section class="live-editor panel">
+            <div class="editor-head">
+                <div>
+                    <p class="eyebrow">Live Code</p>
+                    <h2>HTML-Testfeld</h2>
+                </div>
+                <div class="button-row compact">
+                    <button class="button primary" type="button" onclick="runHtmlPreview()">Ausgabe starten</button>
+                    <button class="button" type="button" onclick="loadHtmlExample()">Beispiel laden</button>
+                </div>
+            </div>
+            <div class="editor-grid">
+                <label class="code-area">
+                    <span>Dein HTML</span>
+                    <textarea id="htmlInput" spellcheck="false">&lt;h1&gt;Hallo, ich bin Emil&lt;/h1&gt;
+&lt;p&gt;Das ist mein erster eigener HTML-Test.&lt;/p&gt;
+&lt;a href="index.html"&gt;Zur Startseite&lt;/a&gt;</textarea>
+                </label>
+                <div class="preview-area">
+                    <span>Live-Ausgabe</span>
+                    <iframe id="htmlPreviewFrame" title="Live HTML Ausgabe"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

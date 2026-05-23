@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emil | CSS lernen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">Emil</a>
+            <div class="nav-links">
+                <div class="nav-group">
+                    <span>Lernen</span>
+                    <a href="html-lernen.html">HTML</a>
+                    <a class="active" href="css-lernen.html">CSS</a>
+                    <a href="javascript-lernen.html">JavaScript</a>
+                    <a href="projekt.html">Projekt</a>
+                </div>
+                <div class="nav-group">
+                    <span>Emil</span>
+                    <a href="index.html">Start</a>
+                    <a href="ueber-mich.html">Über mich</a>
+                    <a href="hobbys.html">Hobbys</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="panel intro-panel">
+            <p class="eyebrow">Design-Mission</p>
+            <h1>CSS macht deine Website schön.</h1>
+            <p>
+                CSS bestimmt Farben, Größen, Abstände, Kästen und Layouts. Ohne CSS ist
+                eine Website nur Inhalt. Mit CSS bekommt sie Charakter.
+            </p>
+        </section>
+
+        <section class="lesson-layout">
+            <article class="lesson-card">
+                <h2>1. Farbe</h2>
+                <code>h1 { color: #00a6ff; }</code>
+                <p>Mit `color` änderst du die Textfarbe.</p>
+            </article>
+            <article class="lesson-card">
+                <h2>2. Kästen</h2>
+                <code>.karte { padding: 20px; border: 2px solid blue; }</code>
+                <p>Mit Abstand und Rahmen baust du echte Bereiche.</p>
+            </article>
+            <article class="lesson-card">
+                <h2>3. Layout</h2>
+                <code>.grid { display: grid; gap: 16px; }</code>
+                <p>Mit Grid kannst du Inhalte sauber nebeneinander anordnen.</p>
+            </article>
+        </section>
+
+        <section class="learning-task panel">
+            <div>
+                <p class="eyebrow">Aufgabe 1</p>
+                <h2>Welche CSS-Eigenschaft ändert die Textfarbe?</h2>
+                <p>Wähle die richtige Antwort.</p>
+            </div>
+            <div class="choice-grid">
+                <button class="choice" type="button" onclick="checkCssColorMission(false)">background</button>
+                <button class="choice" type="button" onclick="checkCssColorMission(true)">color</button>
+                <button class="choice" type="button" onclick="checkCssColorMission(false)">padding</button>
+            </div>
+            <p id="cssColorFeedback" class="feedback">Tipp: Textfarbe heißt auf Englisch `color`.</p>
+        </section>
+
+        <section class="learning-task panel">
+            <div>
+                <p class="eyebrow">Aufgabe 2</p>
+                <h2>Welche Eigenschaft macht Innenabstand?</h2>
+                <p>Innenabstand ist der Platz zwischen Inhalt und Rand einer Box.</p>
+            </div>
+            <div class="choice-grid">
+                <button class="choice" type="button" onclick="checkCssPaddingMission(true)">padding</button>
+                <button class="choice" type="button" onclick="checkCssPaddingMission(false)">border</button>
+                <button class="choice" type="button" onclick="checkCssPaddingMission(false)">color</button>
+            </div>
+            <p id="cssPaddingFeedback" class="feedback">Tipp: Innenabstand heißt `padding`.</p>
+        </section>
+
+        <section class="live-editor panel">
+            <div class="editor-head">
+                <div>
+                    <p class="eyebrow">Live Code</p>
+                    <h2>CSS-Testfeld</h2>
+                </div>
+                <div class="button-row compact">
+                    <button class="button primary" type="button" onclick="runCssMission()">CSS anwenden</button>
+                    <button class="button" type="button" onclick="checkCssMission()">Code prüfen</button>
+                </div>
+            </div>
+            <div>
+                <h2>Mach die Karte blau.</h2>
+                <p>Schreibe CSS in das Feld. Ziel: Hintergrund dunkelblau, Text hellblau und ein blauer Rand.</p>
+            </div>
+            <div class="editor-grid">
+                <label class="code-area">
+                    <span>Dein CSS</span>
+                    <textarea id="cssInput" spellcheck="false">.uebung {
+    background: #03152a;
+    color: #9fe6ff;
+    border: 2px solid #00a6ff;
+}</textarea>
+                </label>
+                <div class="css-preview-shell">
+                    <span>Vorschau</span>
+                    <div id="cssPreview" class="uebung">Diese Karte soll mit deinem CSS gestylt werden.</div>
+                </div>
+            </div>
+            <p id="cssFeedback" class="feedback">Tipp: Nutze background, color und border.</p>
+        </section>
+
+        <section class="next-step panel">
+            <div>
+                <p class="eyebrow">Nächster Schritt</p>
+                <h2>Danach kommt JavaScript.</h2>
+                <p>Wenn deine Seite gut aussieht, kannst du sie mit Buttons und Aktionen lebendig machen.</p>
+            </div>
+            <a class="button primary" href="javascript-lernen.html">Weiter zu JavaScript</a>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

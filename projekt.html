@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emil | Projekt bauen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">Emil</a>
+            <div class="nav-links">
+                <div class="nav-group">
+                    <span>Lernen</span>
+                    <a href="html-lernen.html">HTML</a>
+                    <a href="css-lernen.html">CSS</a>
+                    <a href="javascript-lernen.html">JavaScript</a>
+                    <a class="active" href="projekt.html">Projekt</a>
+                </div>
+                <div class="nav-group">
+                    <span>Emil</span>
+                    <a href="index.html">Start</a>
+                    <a href="ueber-mich.html">Über mich</a>
+                    <a href="hobbys.html">Hobbys</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="panel intro-panel">
+            <p class="eyebrow">Abschluss-Mission</p>
+            <h1>Baue deine erste eigene Website.</h1>
+            <p>
+                Hier wird aus Lernen ein echtes Projekt. Wer diese Schritte schafft, hat
+                die Grundlage für eine eigene Website verstanden.
+            </p>
+        </section>
+
+        <section class="timeline">
+            <article>
+                <span>01</span>
+                <h2>Thema wählen</h2>
+                <p>Überlege dir, worüber deine Website sein soll: über dich, ein Hobby oder ein Spiel.</p>
+            </article>
+            <article>
+                <span>02</span>
+                <h2>HTML schreiben</h2>
+                <p>Baue Überschrift, Texte, Links, Bilder-Platzhalter und Buttons ein.</p>
+            </article>
+            <article>
+                <span>03</span>
+                <h2>CSS gestalten</h2>
+                <p>Gib deiner Website Farben, Kästen, Abstände und ein klares Layout.</p>
+            </article>
+            <article>
+                <span>04</span>
+                <h2>JavaScript testen</h2>
+                <p>Füge eine kleine Aktion hinzu, zum Beispiel einen Button, der Text verändert.</p>
+            </article>
+        </section>
+
+        <section class="project-kit panel">
+            <div>
+                <p class="eyebrow">Starter-Code</p>
+                <h2>Grundgerüst</h2>
+                <p>Damit kann jeder anfangen. Danach wird die Seite Stück für Stück persönlicher.</p>
+            </div>
+            <code>&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Meine Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Meine erste Website&lt;/h1&gt;
+    &lt;p&gt;Hier schreibe ich meinen ersten Text.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+        </section>
+
+        <section class="learning-task panel">
+            <div>
+                <p class="eyebrow">Projekt-Check</p>
+                <h2>Plane deine eigene Seite direkt hier.</h2>
+                <p>Fülle die Felder aus. Wenn alles ausgefüllt ist, bekommst du deine Projekt-Mission.</p>
+            </div>
+            <div class="project-form">
+                <label>Website-Thema<input id="projectTopic" type="text" placeholder="z. B. Fußball, Gaming, Musik"></label>
+                <label>Hauptfarbe<input id="projectColor" type="text" placeholder="z. B. Blau"></label>
+                <label>Erste Seite<input id="projectPage" type="text" placeholder="z. B. Startseite"></label>
+            </div>
+            <button class="button primary" type="button" onclick="checkProjectPlan()">Projekt prüfen</button>
+            <p id="projectFeedback" class="feedback">Tipp: Je genauer dein Plan, desto leichter wird der Code.</p>
+        </section>
+
+        <section class="next-step panel">
+            <div>
+                <p class="eyebrow">Extra</p>
+                <h2>Teste deinen Code live.</h2>
+                <p>Gehe zurück zum HTML-Testfeld und probiere dein eigenes Grundgerüst aus.</p>
+            </div>
+            <a class="button primary" href="html-lernen.html">Zum Live-Testfeld</a>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
